@@ -105,8 +105,14 @@ Half of this code is just me typing things until the red squiggly lines went awa
    ```
    npx playwright test
    ```
-   // you have too do this again after changing the test('', ) to test.only('', )
-
+   So Change the 
+   ```
+   test('',)
+   ```
+   to 
+   ```
+   test.only('', )
+   ```
    * Watch in awe as the script methodically destroys evidence of your political obsessions
    * I wrote this part at 2am and I'm not entirely sure how it functions
 
