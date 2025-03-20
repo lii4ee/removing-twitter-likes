@@ -135,3 +135,6 @@ This tool is licensed under the "Oh God What Have I Tweeted" Public License.
 ---
 *"Twitter cleanse today, new hot takes tomorrow"* - Ancient Twitter Proverb
 
+# npx playwright test --grep "save cookies after login"
+I should used something like this to make this eaiser but I don't know what this does
+:)
