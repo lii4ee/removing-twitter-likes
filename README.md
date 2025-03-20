@@ -63,9 +63,6 @@ Half of this code is just me typing things until the red squiggly lines went awa
    ```
 
 3. Create `playwright.config.js` in the root folder
-   ```
-   # Paste the config code here
-   ```
 
 4. **IMPORTANT:** Change the Twitter handle from mine to yours!
    ```javascript
@@ -93,7 +90,14 @@ Half of this code is just me typing things until the red squiggly lines went awa
    ```
    You might see that only one test is being running
    ```
-   So Change the test('',) to test.only('', )
+   So Change the 
+   ```
+   test('',)
+   ```
+   to 
+   ```
+   test.only('', )
+   ```
    You have to do this for the next time you run it as well
    //After running this one time change this into test.only('...') from test('...')
 
