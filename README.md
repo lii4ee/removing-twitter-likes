@@ -1,6 +1,10 @@
 # Twitter Regret Eraser 3000 
 *Because your drunk (water obviously) Twitter likes from 2018 shouldn't haunt you forever*
 
+## example.spec.js
+is where all the main code is there <br>
+Also the playwright.config.js
+
 ## THE PROBLEM 
 
 So you've been on Twitter/X (whatevs) for too long and:
