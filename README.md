@@ -101,7 +101,7 @@ Half of this code is just me typing things until the red squiggly lines went awa
    You have to do this for the next time you run it as well
    //After running this one time change this into test.only('...') from test('...')
 
-3. **Unlike all those PM of India tweets:**
+3. **Unlike all those F1 prediction tweets:**
    ```
    npx playwright test
    ```
