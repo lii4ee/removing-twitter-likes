@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import * as fs from 'fs';
 
-test('save cookies after login', async ({ browser }) => {
+test.only('save cookies after login', async ({ browser }) => {
   console.log('Starting the login process');
 
   const context = await browser.newContext();
@@ -108,7 +108,7 @@ test('unlike tweet', async ({ browser }) => {
 });
 
 
-test.only('undo retweet', async ({ browser }) => {
+test('undo retweet', async ({ browser }) => {
   
   const context = await browser.newContext();
   const cookiesFromFile = JSON.parse(fs.readFileSync('cookies.json', 'utf8'));
