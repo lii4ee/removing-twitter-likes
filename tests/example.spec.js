@@ -23,7 +23,7 @@ test.only('save cookies after login', async ({ browser }) => {
 
 //This is a test to check whether the cookies work correctly 
 //Skip this if you don't encounter error with the next test
-test('use saved cookies', async ({ browser }) => {
+test('use saved cookies', async ({ browser }) => {                              // After running this one time change this into test.only('...') from test('...')
   if (!fs.existsSync('cookies.json')) {
     console.log('No cookies file found. Run the login test first.');
     test.skip();
@@ -43,7 +43,7 @@ test('use saved cookies', async ({ browser }) => {
 });
 
 //This is the main test to unlike your liked tweets
-test('unlike tweet', async ({ browser }) => {
+test('unlike tweet', async ({ browser }) => {   // After running this one time change this into test.only('...') from test('...')
   const context = await browser.newContext();
   const cookiesFromFile = JSON.parse(fs.readFileSync('cookies.json', 'utf8'));
   await context.addCookies(cookiesFromFile);
@@ -76,7 +76,7 @@ test('unlike tweet', async ({ browser }) => {
 });
 
 //This is the main test to undo your retweets
-test('undo retweet', async ({ browser }) => {
+test('undo retweet', async ({ browser }) => {       // After running this one time change this into test.only('...') from test('...')
   const context = await browser.newContext();
   const cookiesFromFile = JSON.parse(fs.readFileSync('cookies.json', 'utf8'));
   await context.addCookies(cookiesFromFile);
