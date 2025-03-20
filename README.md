@@ -1,14 +1,13 @@
-# 🧹 Twitter Regret Eraser 3000 🧹
-
+# Twitter Regret Eraser 3000 
 *Because your drunk (water obviously) Twitter likes from 2018 shouldn't haunt you forever*
 
-## 🚨 THE PROBLEM 🚨
+## THE PROBLEM 
 
 So you've been on Twitter/X (whatevs) for too long and:
 1. You've retweeted so many political bot fights that the algorithm thinks you're running a call center for angry opinions
 2. Your "Liked" section is basically a documentary of your descent into madness
 
-## 💊 THE SOLUTION 💊
+## THE SOLUTION 
 
 This magical script will help you unlike all those tweets and undo all those retweets so you can pretend you were never part of the problem!
 
@@ -18,7 +17,7 @@ Full disclosure: I cobbled this together with prayer, and spite. It works on my 
 
 Half of this code is just me typing things until the red squiggly lines went away. The other half is from tutorials I didn't fully read.
 
-## 🛠️ Prerequisites 🛠️
+## Prerequisites 
 
 1. **Node.js** - Because you need one more JavaScript runtime in your life
    ```
@@ -73,7 +72,8 @@ Half of this code is just me typing things until the red squiggly lines went awa
    // :)
    ```
 
-## 🎭 Usage 🎭
+## 🎭 Usage
+*that emoji is the logo for playwright*
 
 1. **Login and save cookies:** 🍪🍪🍪🍪
    ```
@@ -125,13 +125,13 @@ Half of this code is just me typing things until the red squiggly lines went awa
 
    * Goodbye, evidence of that time you retweeted 47 tweets in a row about agricultural policy
 
-## ⚠️ Warnings ⚠️
+## ⚠️ Warnings
 1. Twitter/X might think you're a bot and temporarily restrict your account. If so, congratulations! You've come full circle!
 2. This script might make your timeline look suspiciously empty, and people might wonder if you've been abducted by aliens or finally got a life.
 3. If this breaks your account somehow, remember: I warned you I didn't know what I was doing.
 4. If anything crashes, try turning it off and on again. That's literally the extent of my debugging knowledge.
 
-## 🙏 Acknowledgements 🙏
+## Acknowledgements
 
 - Thanks to Twitter bots for providing endless entertainment in comment sections
 - Special thanks to that one tweet about Indian politics that made you go "YEAH!" and hit retweet at 3 AM
@@ -139,7 +139,7 @@ Half of this code is just me typing things until the red squiggly lines went awa
 - Caffeine, which powered the creation of this code through several nights of "why isn't this working?"
 - Yes This simple code took several nights because I did this using my selenium knowledge not my playwright knowledge
 
-## 📃 License 📃
+## 📃 License
 
 This tool is licensed under the "Oh God What Have I Tweeted" Public License.
 ---
