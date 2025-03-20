@@ -3,7 +3,9 @@
 
 ## example.spec.js
 is the place where all the main code is<br>
-Also the playwright.config.js 
+Also the playwright.config.js  <br>
+
+these are in the **tests** folder
 
 ## THE PROBLEM 
 
