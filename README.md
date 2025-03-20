@@ -75,18 +75,18 @@ Half of this code is just me typing things until the red squiggly lines went awa
 
 ## 🎭 Usage 🎭
 
-1. **Login and save cookies:**
+1. **Login and save cookies:** 🍪🍪🍪🍪
    ```
    npx playwright test
    ```
    * A browser will open
    * Login manually (we're not stealing your credentials, pinky promise)
    * Wait for the script to detect your login
-   * The browser will close and save your cookies to `cookies.json`
+   * The browser will close and save your cookies to `cookies.json` 🍪🍪🍪🍪
    * DO NOT SHARE THIS FILE (unless you want internet strangers tweeting about cryptocurrency from your account)
    * If it doesn't work, I'm as confused as you are
 
-2. **Optional: Test if cookies work:**
+2. **Optional: Test if cookies work:**🍪🍪🍪🍪
    ```
    You might see that only one test is being running
    ```
@@ -146,5 +146,5 @@ This tool is licensed under the "Oh God What Have I Tweeted" Public License.
 *"Twitter cleanse today, new hot takes tomorrow"* - Ancient Twitter Proverb
 
 # npx playwright test --grep "save cookies after login"
-I should used something like this to make this eaiser but I don't know what this does
-:)
+I should used something like this to make this eaiser for you but I don't know what this does <br>
+# :)
