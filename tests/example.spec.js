@@ -7,13 +7,10 @@ test('save cookies after login', async ({ browser }) => {
   const context = await browser.newContext();
   const page = await context.newPage();
   
-  // Go to login page
   await page.goto('https://x.com/login');
   
   console.log('Please login manually in the browser window');
   
-  // Instead of a fixed timeout, wait for an element that indicates successful login
-  // This will either succeed when you log in or fail when the timeout is reached
   try {
     // Wait for a maximum of 90 seconds for this element to appear
     await page.locator('[data-testid="SideNav_NewTweet_Button"], [data-testid="AppTabBar_Tweet_Button"]').waitFor({ timeout: 90000 });
@@ -29,7 +26,6 @@ test('save cookies after login', async ({ browser }) => {
 });
 
 test('use saved cookies', async ({ browser }) => {
-  // Skip this test if cookies file doesn't exist
   if (!fs.existsSync('cookies.json')) {
     console.log('No cookies file found. Run the login test first.');
     test.skip();
@@ -61,7 +57,8 @@ test('use saved cookies', async ({ browser }) => {
   }
 });
 
-test.only('unlike tweet', async ({ browser }) => {
+test('unlike tweet', async ({ browser }) => {
+
   const context = await browser.newContext();
   const cookiesFromFile = JSON.parse(fs.readFileSync('cookies.json', 'utf8'));
   await context.addCookies(cookiesFromFile);
@@ -83,12 +80,7 @@ test.only('unlike tweet', async ({ browser }) => {
   while (unlikedCount < maxUnlikes) {
     // Find all unlike buttons
     const unlikeButtons = await page.locator('[data-testid="unlike"]').all();
-    
-    // If no more unlike buttons are found, break the loop
-    // if (unlikeButtons.length === 0) {
-    //   console.log('No more liked tweets found!');
-    //   break;
-    // }
+
     
     // Unlike each tweet
     for (const button of unlikeButtons) {
@@ -112,5 +104,43 @@ test.only('unlike tweet', async ({ browser }) => {
   }
   
   console.log(`Unliking process completed. Total unliked: ${unlikedCount}`);
+  
+});
+
+
+test.only('undo retweet', async ({ browser }) => {
+  
+  const context = await browser.newContext();
+  const cookiesFromFile = JSON.parse(fs.readFileSync('cookies.json', 'utf8'));
+  await context.addCookies(cookiesFromFile);
+  
+  const page = await context.newPage();
+  await page.goto('https://x.com/AN5EL0');
+  
+  await page.waitForSelector('[data-testid="primaryColumn"]');
+  
+  let undoneRetweet = 0;
+  
+  const maxUndoneRetweet = 100; 
+  console.log('Starting to undoing retweets.');
+
+  while (undoneRetweet < maxUndoneRetweet) {
+    const unlikeButtons = await page.locator('[data-testid="unretweet"]').all();
+    for (const button of unlikeButtons) {
+      try {
+        await button.scrollIntoViewIfNeeded();
+        await button.click();
+        await page.locator('[data-testid="unretweetConfirm"]').click();
+        undoneRetweet++;
+        console.log(`Unliked tweet #${undoneRetweet}`);
+        await page.waitForTimeout(1000);
+      } catch (error) {
+        console.log('Error unliking a tweet:', error.message);
+      }
+    }
+    await page.evaluate(() => window.scrollBy(0, 500));
+    await page.waitForTimeout(2000); 
+  }
+  console.log(`Unliking process completed. Total unliked: ${undoneRetweet}`);
   
 });
